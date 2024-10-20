@@ -5,6 +5,8 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
+        "rhko/user-bridge": "dev-main",
+        "rhko/kafka-bridge": "dev-main",
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -20,11 +22,23 @@
         "nunomaduro/collision": "^5.10",
         "phpunit/phpunit": "^9.5.10"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/rhko/user-bridge.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/rhko/kafka-bridge.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "Rhko\\UserBridge\\": "vendor/rhko/user-bridge/src",
+            "Rhko\\KafkaBridge\\": "vendor/rhko/kafka-bridge/src"
         }
     },
     "autoload-dev": {

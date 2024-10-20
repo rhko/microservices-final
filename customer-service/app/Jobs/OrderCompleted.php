@@ -3,7 +3,6 @@
 namespace App\Jobs;
 
 use App\Models\Order;
-use App\Models\OrderItem;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -36,21 +35,9 @@ class OrderCompleted implements ShouldQueue
     {
         Order::create([
             'id' => $this->data['id'],
-            'code' => $this->data['code'],
-            'transaction_id' => $this->data['transaction_id'],
-            'first_name' => $this->data['first_name'],
-            'last_name' => $this->data['last_name'],
-            'email' => $this->data['email'],
             'user_id' => $this->data['user_id'],
-            'customer_email' => $this->data['customer_email'],
-            'address' => $this->data['address'],
-            'city' => $this->data['city'],
-            'country' => $this->data['country'],
-            'zip' => $this->data['zip'],
-            'created_at' => $this->data['created_at'],
-            'updated_at' => $this->data['updated_at'],
+            'code' => $this->data['code'],
+            'total' => $this->data['customer_revenue'],
         ]);
-
-        OrderItem::insert($this->data['order_items']);
     }
 }

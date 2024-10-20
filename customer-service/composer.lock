@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "94ad426b53829ea633734df5f49695fc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3008,6 +3008,78 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "rhko/kafka-bridge",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rhko/kafka-bridge.git",
+                "reference": "b9970a62e37a1f0d7594dce5fa7be3f983bb137e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rhko/kafka-bridge/zipball/b9970a62e37a1f0d7594dce5fa7be3f983bb137e",
+                "reference": "b9970a62e37a1f0d7594dce5fa7be3f983bb137e",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.50"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rhko\\KafkaBridge\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "rhko",
+                    "email": "hk.tfr91@gmail.com"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/rhko/kafka-bridge/tree/main",
+                "issues": "https://github.com/rhko/kafka-bridge/issues"
+            },
+            "time": "2024-10-20T11:52:52+00:00"
+        },
+        {
+            "name": "rhko/user-bridge",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rhko/user-bridge.git",
+                "reference": "4bfdfcbc648e2314e237feeb63b22b8c982c1422"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rhko/user-bridge/zipball/4bfdfcbc648e2314e237feeb63b22b8c982c1422",
+                "reference": "4bfdfcbc648e2314e237feeb63b22b8c982c1422",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.50"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rhko\\UserBridge\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "rhko",
+                    "email": "hk.tfr91@gmail.com"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/rhko/user-bridge/tree/main",
+                "issues": "https://github.com/rhko/user-bridge/issues"
+            },
+            "time": "2024-10-20T11:17:45+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7755,12 +7827,15 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhko/kafka-bridge": 20,
+        "rhko/user-bridge": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.3|^8.0"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

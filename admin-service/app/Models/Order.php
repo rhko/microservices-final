@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $transaction_id
  * @property int $user_id
  * @property string $code
- * @property string $ambassador_email
+ * @property string $customer_email
  * @property string $first_name
  * @property string $last_name
  * @property string $email
@@ -27,7 +27,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Order newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Order query()
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereAddress($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Order whereAmbassadorEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Order whereCustomerEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereCity($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereComplete($value)
@@ -45,7 +45,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read mixed $name
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\OrderItem[] $orderItems
  * @property-read int|null $order_items_count
- * @property-read mixed $ambassador_revenue
+ * @property-read mixed $customer_revenue
  * @method static \Database\Factories\OrderFactory factory(...$parameters)
  * @mixin \Eloquent
  */
@@ -70,9 +70,9 @@ class Order extends Model
         return $this->orderItems->sum(fn(OrderItem $item) => $item->admin_revenue);
     }
 
-    public function getAmbassadorRevenueAttribute()
+    public function getCustomerRevenueAttribute()
     {
         usleep(100000);
-        return $this->orderItems->sum(fn(OrderItem $item) => $item->ambassador_revenue);
+        return $this->orderItems->sum(fn(OrderItem $item) => $item->customer_revenue);
     }
 }

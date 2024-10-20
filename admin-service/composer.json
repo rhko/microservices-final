@@ -37,7 +37,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Raft\\UserBridge\\": "vendor/rhko/user-bridge/src",
+            "Rhko\\UserBridge\\": "vendor/rhko/user-bridge/src",
             "Rhko\\KafkaBridge\\": "vendor/rhko/kafka-bridge/src"
         }
     },
